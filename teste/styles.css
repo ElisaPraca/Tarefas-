@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.logo {
+    width: 200px; /* Logo mais larga */
+    height: auto; /* Manter proporção correta */
+    margin-bottom: 10px; /* Espaço entre a logo e o texto */
+}
+
+.task-day {
+    margin-bottom: 20px;
+}
+
+.task-day h2 {
+    background: linear-gradient(45deg, #007BFF, #00D4FF);
+    color: white;
+    padding: 18px 18px; /* Botão com padding mais suave */
+    margin: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px; /* Tamanho de fonte do botão ajustado */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-day h2:hover {
+    background: linear-gradient(45deg, #00D4FF, #007BFF);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Inicialmente oculto */
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 8px 12px; /* Botão com menos padding */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.task-list li:hover {
+    background-color: #f1f1f1;
+}
+
+.task-list li button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px; /* Botão menor */
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.task-list li button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+.task-list li button:active {
+    transform: scale(1);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite quebra de linha caso necessário */
+    gap: 10px; /* Espaçamento horizontal e vertical entre os botões */
+}
+
+.day-button {
+    width: auto; /* Ajuste automático do tamanho */
+    padding: 8px 16px; /* Tamanho do botão */
+    font-size: 14px; /* Fonte do botão */
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #007BFF, #FF7F50); /* Gradiente */
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.day-button:hover {
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+.hidden {
+    display: none;
+}
