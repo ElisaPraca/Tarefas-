@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -21,6 +22,7 @@ h1 {
     color: #333;
 }
 
+/* Logo */
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -31,11 +33,12 @@ h1 {
 }
 
 .logo {
-    width: 200px; /* Logo mais larga */
-    height: auto; /* Manter proporção correta */
-    margin-bottom: 10px; /* Espaço entre a logo e o texto */
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
+/* Estilos das tarefas */
 .task-day {
     margin-bottom: 20px;
 }
@@ -43,12 +46,12 @@ h1 {
 .task-day h2 {
     background: linear-gradient(45deg, #007BFF, #00D4FF);
     color: white;
-    padding: 18px 18px; /* Botão com padding mais suave */
+    padding: 18px 18px;
     margin: 0;
     border-radius: 12px;
     cursor: pointer;
     text-align: center;
-    font-size: 16px; /* Tamanho de fonte do botão ajustado */
+    font-size: 16px;
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -64,7 +67,7 @@ h1 {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* Inicialmente oculto */
+    display: none;
 }
 
 .task-list li {
@@ -73,7 +76,7 @@ h1 {
     align-items: center;
     background: #f9f9f9;
     margin: 5px 0;
-    padding: 8px 12px; /* Botão com menos padding */
+    padding: 8px 12px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
@@ -86,7 +89,7 @@ h1 {
     background-color: #28a745;
     color: white;
     border: none;
-    padding: 6px 12px; /* Botão menor */
+    padding: 6px 12px;
     border-radius: 30px;
     cursor: pointer;
     font-size: 14px;
@@ -104,28 +107,83 @@ h1 {
 
 .buttons-container {
     display: flex;
-    justify-content: center; /* Centraliza os botões */
-    flex-wrap: wrap; /* Permite quebra de linha caso necessário */
-    gap: 10px; /* Espaçamento horizontal e vertical entre os botões */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .day-button {
-    width: auto; /* Ajuste automático do tamanho */
-    padding: 8px 16px; /* Tamanho do botão */
-    font-size: 14px; /* Fonte do botão */
+    width: auto;
+    padding: 8px 16px;
+    font-size: 14px;
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(to right, #007BFF, #FF7F50); /* Gradiente */
+    background: linear-gradient(to right, #007BFF, #FF7F50);
     color: white;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .day-button:hover {
-    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hidden {
     display: none;
+}
+
+/* Estilos da Caixa de Mensagem */
+.message-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#messageBox {
+    width: 100%;
+    max-width: 500px;
+    height: 120px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#messageBox:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+#sendMessage {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #007BFF, #00D4FF);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#sendMessage:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#sendMessage:active {
+    transform: scale(1);
 }

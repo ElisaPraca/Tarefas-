@@ -174,3 +174,42 @@ async function sendTask(day, task) {
 
 // Renderizar as tarefas ao carregar a página
 renderTasks();
+
+document.getElementById("sendMessage").addEventListener("click", async () => {
+  const message = document.getElementById("messageBox").value;
+
+  if (!message.trim()) {
+    alert("Por favor, digite uma mensagem antes de enviar.");
+    return;
+  }
+
+  const now = new Date();
+  const formattedDate = now.toISOString().split("T")[0]; // Formata a data
+  const formattedTime = now.toLocaleTimeString("pt-BR", { hour12: false }); // Formata o horário
+
+  const dataToSend = {
+    Horário: formattedTime,
+    Data: formattedDate,
+    Mensagem: message,
+  };
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ data: [dataToSend] }),
+    });
+
+    if (response.ok) {
+      alert("Mensagem enviada com sucesso!");
+      document.getElementById("messageBox").value = ""; // Limpa a caixa de texto
+    } else {
+      alert("Erro ao enviar a mensagem.");
+    }
+  } catch (error) {
+    console.error("Erro ao enviar a mensagem:", error);
+    alert("Erro ao enviar a mensagem.");
+  }
+});

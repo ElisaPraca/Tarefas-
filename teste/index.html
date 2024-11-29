@@ -4,21 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checklist de Tarefas Fixas</title>
+  <!-- Estilos e fontes -->
   <link rel="stylesheet" href="styles.css">
-  <!-- Fonte sofisticada -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <!-- Logo e Texto ConnectLink -->
-    <div class="logo-container">
-      <img src="logoconnect.png" alt="Logo" class="logo">
-    </div>
-    
-    <h1>Cronograma de Limpeza</h1>
-    <div id="taskList">
-      <!-- As tarefas fixas serão geradas dinamicamente -->
-    </div>
+    <!-- Logo -->
+    <header class="logo-container">
+      <img src="logoconnect.png" alt="Logo ConnectLink" class="logo">
+    </header>
+
+    <!-- Caixa de Mensagem -->
+    <section class="message-container">
+      <textarea id="messageBox" placeholder="Digite sua mensagem aqui..."></textarea>
+      <button id="sendMessage">Enviar Mensagem</button>
+    </section>
+
+    <!-- Cronograma de Limpeza -->
+    <main>
+      <h1>Cronograma de Limpeza</h1>
+      <div id="taskList">
+        <!-- As tarefas fixas serão geradas dinamicamente -->
+      </div>
+    </main>
   </div>
   <script src="script.js"></script>
 </body>
